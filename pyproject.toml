@@ -1,0 +1,17 @@
+[build-system]
+requires=["setuptools>=68","wheel"]
+build-backend="setuptools.build_meta"
+
+[project]
+name="contextsourceaudit"
+version="1.0.0"
+description="Audit assembled LLM context packs for source diversity, duplicate passages, missing citations, token concentration, and oversized evidence blocks."
+readme="README.md"
+requires-python=">=3.9"
+license={text="MIT"}
+
+[project.scripts]
+context-source-audit="context_source_audit.cli:main"
+
+[tool.setuptools.packages.find]
+where=["src"]
